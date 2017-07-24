@@ -1,19 +1,22 @@
 GPPFlags=-lglfw3 -lGLEW -ldl -lGL -lGLU -lXrandr -lXext -lX11 -lXcursor -lXi -lpthread -lXinerama
-OBJRoot=obj
-BINRoot=bin
+OBJRoot=../build/obj
+BINRoot=../build/bin
 
 main: window bindir
 	g++ $(GPPFlags) -c main.cpp -o $(OBJRoot)/main.o 
 	g++ -o $(BINRoot)/main $(OBJRoot)/main.o $(OBJRoot)/window.o $(GPPFlags)
 	chmod +x $(BINRoot)/main
 run: clean main
-	./main
+	$(BINRoot)/main
 clean:
 	rm -rf $(BINRoot)
 	rm -rf $(OBJRoot)
 bindir: 
-	mkdir -p bin
+	mkdir -p $(BINRoot)
 objdir:
-	mkdir -p obj
+	mkdir -p $(OBJRoot)
 window: objdir window.h window.cpp
 	g++ $(GPPFlags) -c window.cpp -o $(OBJRoot)/window.o
+
+node: window
+	g++ $(GPPFlags) -c node.cpp -o $(OBJRoot)/node.o

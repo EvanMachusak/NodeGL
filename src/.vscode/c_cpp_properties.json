@@ -5,12 +5,14 @@
             "includePath": [
                 "/usr/include",
                 "/usr/local/lib",
+                "/usr/include/node",
                 "${workspaceRoot}"
             ],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
                     "/usr/include",
+                    "/usr/include/node",
                     "/usr/local/lib",
                     "${workspaceRoot}"
                 ]
