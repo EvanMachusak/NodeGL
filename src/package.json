@@ -1,0 +1,14 @@
+{
+  "name": "nodegl",
+  "version": "1.0.0",
+  "description": "OpenGL bindings for NodeJS",
+  "main": "js/nodegl.js",
+  "scripts": {
+    "debug": "js/nodegl.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.16"
+  }
+}

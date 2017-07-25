@@ -2,7 +2,7 @@
     "targets": [
         {
             "target_name": "nodegl",
-            "sources": [ "node.cpp" ]
+            "sources": [ "nodegl.cpp" ]
         }
     ]
 }

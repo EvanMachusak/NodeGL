@@ -1,6 +1,6 @@
 GPPFlags=-lglfw3 -lGLEW -ldl -lGL -lGLU -lXrandr -lXext -lX11 -lXcursor -lXi -lpthread -lXinerama
-OBJRoot=../build/obj
-BINRoot=../build/bin
+OBJRoot=./build/obj
+BINRoot=./build/bin
 
 main: window bindir
 	g++ $(GPPFlags) -c main.cpp -o $(OBJRoot)/main.o 
