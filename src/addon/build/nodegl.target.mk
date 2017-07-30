@@ -38,7 +38,8 @@ INCS_Debug := \
 	-I/home/evan/.node-gyp/8.1.3/include/node \
 	-I/home/evan/.node-gyp/8.1.3/src \
 	-I/home/evan/.node-gyp/8.1.3/deps/uv/include \
-	-I/home/evan/.node-gyp/8.1.3/deps/v8/include
+	-I/home/evan/.node-gyp/8.1.3/deps/v8/include \
+	-I$(srcdir)/node_modules/nan
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=nodegl' \
@@ -73,10 +74,12 @@ INCS_Release := \
 	-I/home/evan/.node-gyp/8.1.3/include/node \
 	-I/home/evan/.node-gyp/8.1.3/src \
 	-I/home/evan/.node-gyp/8.1.3/deps/uv/include \
-	-I/home/evan/.node-gyp/8.1.3/deps/v8/include
+	-I/home/evan/.node-gyp/8.1.3/deps/v8/include \
+	-I$(srcdir)/node_modules/nan
 
 OBJS := \
-	$(obj).target/$(TARGET)/nodegl.o
+	$(obj).target/$(TARGET)/addon.o \
+	$(obj).target/$(TARGET)/NodeGLWindow.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)

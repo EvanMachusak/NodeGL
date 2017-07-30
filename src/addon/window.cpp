@@ -1,9 +1,9 @@
-#include "window.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include "window.h"
 using namespace std;
 
 int createWindow(int width, int height, const char* title)
