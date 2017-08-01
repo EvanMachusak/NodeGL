@@ -115,7 +115,19 @@ LDFLAGS_Release := \
 	-rdynamic \
 	-m64
 
-LIBS :=
+LIBS := \
+	-lglfw3 \
+	-lGLEW \
+	-ldl \
+	-lGL \
+	-lGLU \
+	-lXrandr \
+	-lXext \
+	-lX11 \
+	-lXcursor \
+	-lXi \
+	-lpthread \
+	-lXinerama
 
 $(obj).target/nodegl.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(obj).target/nodegl.node: LIBS := $(LIBS)

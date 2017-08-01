@@ -9,15 +9,6 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceRoot}/js/nodegl.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}/js/nodegl.js",
-            "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
-            ]
         }
     ]
 }

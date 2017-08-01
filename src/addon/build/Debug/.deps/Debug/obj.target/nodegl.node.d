@@ -1,0 +1,1 @@
+cmd_Debug/obj.target/nodegl.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=nodegl.node -o Debug/obj.target/nodegl.node -Wl,--start-group Debug/obj.target/nodegl/addon.o Debug/obj.target/nodegl/NodeGLWindow.o -Wl,--end-group -lglfw3 -lGLEW -ldl -lGL -lGLU -lXrandr -lXext -lX11 -lXcursor -lXi -lpthread -lXinerama

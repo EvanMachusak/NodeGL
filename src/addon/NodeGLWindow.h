@@ -2,6 +2,8 @@
 #define NODEGLWINDOW_H
 
 #include <nan.h>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 // Example top-level functions. These functions demonstrate how to return various js types.
 // Implementations are in functions.cc
@@ -26,8 +28,12 @@ class NodeGLWindow : public Nan::ObjectWrap {
 
     static NAN_METHOD(New);
     static NAN_METHOD(PlusOne);
+    static NAN_METHOD(Show);
+    static NAN_GETTER(IsShowing);
     static Nan::Persistent<v8::Function> constructor;
     double value_;
+    GLFWwindow *window;
+    bool windowShowing;
 };
 
 #endif

@@ -1,1 +1,0 @@
-cmd_Release/obj.target/nodegl.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=nodegl.node -o Release/obj.target/nodegl.node -Wl,--start-group Release/obj.target/nodegl/addon.o Release/obj.target/nodegl/NodeGLWindow.o -Wl,--end-group 

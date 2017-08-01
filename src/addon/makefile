@@ -18,5 +18,5 @@ objdir:
 window: objdir window.h window.cpp
 	g++ $(GPPFlags) -c window.cpp -o $(OBJRoot)/window.o
 
-node: window
-	g++ $(GPPFlags) -c node.cpp -o $(OBJRoot)/node.o
+node:
+	node-gyp build

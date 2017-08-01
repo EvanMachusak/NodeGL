@@ -35,6 +35,11 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/obj": true,
-        "**/bin": true
+        "**/bin": true,
+        "**/node_modules": true,
+        "**/addon/build": false,
+        "**/package-lock.json": true,
+        "**/js": false
+        
     }
 }
